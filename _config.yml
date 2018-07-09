@@ -5,7 +5,7 @@
 # Site
 title: guoyouworld
 subtitle: 我家有块自留地,有青草,有西瓜.
-description: 
+description:
 author: kaliey
 email: guoyouworld@163.com
 language:
@@ -79,7 +79,10 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: http://github.com/guoyouworld/guoyouworld.github.io.git
+  #repository: http://github.com/guoyouworld/guoyouworld.github.io.git
+  repo:
+    github: http://github.com/guoyouworld/guoyouworld.github.io.git
+    coding: http://git.coding.net/guoyouworld/guoyouworld.coding.me.git
   branch: master
 
 jsonContent:

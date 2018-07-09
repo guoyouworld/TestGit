@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="guoyouworld">
 <meta property="og:description" content="竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-09T08:25:21.217Z">
+<meta property="og:updated_time" content="2018-07-09T08:33:55.285Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Guoyouworld">
 <meta name="twitter:description" content="竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…">
@@ -184,6 +184,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" >
+                <span class="btn-bg"></span>
+                <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article" style="display:none">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                
+            </div>
+            <script type="text/javascript">
+              function showToc(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:block");
+                  show_toc_btn.setAttribute("style","display:none");
+                };
+              function showBtn(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:none");
+                  show_toc_btn.setAttribute("style","display:block");
+                };
+             </script>
+              
+        <!-- 目录内容结束 -->
         <p>竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…<br><a id="more"></a></p>
 
       
@@ -320,7 +347,7 @@
 
 
   
-  
+
   
 
   
