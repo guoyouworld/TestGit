@@ -6,10 +6,10 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
+  github: "https://github.com/guoyouworld/"
+  weibo: "https://www.weibo.com/5049722638/profile?topnav=1&wvr=6"
   rss: "#"
-  zhihu: "#"
+  zhihu: "https://www.zhihu.com/people/zheng-hai-meng-19/activities"
   #qq: "#"
   #weixin: "#"
   #jianshu: "#"
