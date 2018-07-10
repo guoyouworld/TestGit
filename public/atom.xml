@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-10T00:37:40.716Z</updated>
+  <updated>2018-07-10T01:02:25.267Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="http://yoursite.com/2018/07/09/hello-world/"/>
     <id>http://yoursite.com/2018/07/09/hello-world/</id>
     <published>2018-07-09T07:19:38.277Z</published>
-    <updated>2018-07-10T00:37:40.716Z</updated>
+    <updated>2018-07-10T01:02:25.267Z</updated>
     
-    <content type="html"><![CDATA[<p>竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…<br><a id="more"></a><br><code>helloworld</code></p>]]></content>
+    <content type="html"><![CDATA[<p>竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…<br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;竹篮打水，最终什么都留不下，那我们为什么不在竹篮下面接一个塑料袋呢…&lt;br&gt;
     
     </summary>
+    
+      <category term="text" scheme="http://yoursite.com/categories/text/"/>
     
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
