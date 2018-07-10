@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | guoyouworld</title>
+  <title>初探网络编程 | guoyouworld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="guoyouworld">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="网络编程有什么用？">
+<meta name="keywords" content="网络编程,Socket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探网络编程">
+<meta property="og:url" content="http://yoursite.com/2018/07/10/初探网络编程/index.html">
 <meta property="og:site_name" content="guoyouworld">
+<meta property="og:description" content="网络编程有什么用？">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-10T07:21:37.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guoyouworld">
+<meta name="twitter:title" content="初探网络编程">
+<meta name="twitter:description" content="网络编程有什么用？">
   
     <link rel="alternative" href="/atom.xml" title="guoyouworld" type="application/atom+xml">
   
@@ -158,36 +163,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-初探网络编程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/10/初探网络编程/" class="archive-article-date">
-  	<time datetime="2018-07-10T06:09:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/10/初探网络编程/">初探网络编程</a>
+    <h1 class="article-title" itemprop="name">
+      初探网络编程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/07/10/初探网络编程/" class="archive-article-date">
+  	<time datetime="2018-07-10T06:09:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" >
+                <span class="btn-bg"></span>
+                <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article" style="display:none">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              function showToc(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:block");
+                  show_toc_btn.setAttribute("style","display:none");
+                };
+              function showBtn(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:none");
+                  show_toc_btn.setAttribute("style","display:block");
+                };
+             </script>
+              
+        <!-- 目录内容结束 -->
+        <p>网络编程有什么用？<br><a id="more"></a></p>
+<h3 id="什么是网络编程？"><a href="#什么是网络编程？" class="headerlink" title="什么是网络编程？"></a>什么是网络编程？</h3><p>&ensp;&ensp;&ensp;&ensp;老丁的电脑将本地数据进行<code>打包</code>，通过网络将包<code>扔出去</code>，网络另一端的小红的电脑将数据包<code>解开</code>，达到<strong>通信<sub>(眉目传情)</sub></strong>的效果。<br>&ensp;&ensp;&ensp;&ensp;老丁通过微信发了一条消息给小红，可能觉得凉的不够快，又通过qq给小红的闺蜜发了一条，顺便还浏览一个不可描述的网页，这样小红的微信和闺蜜的qq几乎同时收到了老丁的信息，老丁也打开了浏览器的相关页面。<br>&ensp;&ensp;&ensp;&ensp;嗯，我们发现，<strong>网络通信其实是两个进程之间的通信。</strong></p>
+<blockquote>
+<ol>
+<li>找到对方<code>IP</code></li>
+<li>数据要发送到对方指定的应用程序上<code>端口</code></li>
+<li>定义通信规则，通常被称为<code>协议</code></li>
+</ol>
+</blockquote>
+<p><br></p>
+<h3 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h3><p>数据一层一层，从上到下进行封装，最终发送到对端，由对端网络模型一层一层进行解析。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">OSI</th>
+<th style="text-align:left">TCP/IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">应用层</td>
+<td style="text-align:left">应用层</td>
+</tr>
+<tr>
+<td style="text-align:left">表示层</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">会话层</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">传输层</td>
+<td style="text-align:left">传输层</td>
+</tr>
+<tr>
+<td style="text-align:left">网络层</td>
+<td style="text-align:left">网络层</td>
+</tr>
+<tr>
+<td style="text-align:left">数据链路层</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">物理层</td>
+<td style="text-align:left">主机至网络层</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="网络三要素"><a href="#网络三要素" class="headerlink" title="网络三要素"></a>网络三要素</h3><blockquote>
+<p><strong>IP地址</strong><br>&ensp;&ensp;&ensp;&ensp;java对象：<code>InetAddress</code></p>
+<pre><code class="java">InetAddress localhost = InetAddress.getLocalHost();
+System.out.println(localhost.toString());
+</code></pre>
+<p><strong>端口</strong><br>&ensp;&ensp;&ensp;&ensp;为了标识这些发送和接收消息的应用程序，所以给这些应用程序用数字标识，这些数字叫做端口。</p>
+</blockquote>
+<blockquote>
+<p><strong>传输协议</strong><br>&ensp;&ensp;&ensp;&ensp;<strong>UDP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;不需要建立连接<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;将数据和源和目的地封装成数据包（Max：64K）<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;面向无连接，速度快，不可靠协议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;通常：（速度快）(不需要保存，可以丢包)<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;聊天室：feiq<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;屏幕共享<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;网络视频会议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;邮寄快递，对讲机<br><br><br>&ensp;&ensp;&ensp;&ensp;<strong>TCP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;建立连接，形成传输数据通道<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;在连接中进行大数据传输<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手完成连接，可靠的通信<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;相率相对低<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;打电话<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手：<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：张三你在么？<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;张三：我在。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：我知道了。</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -203,7 +314,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -216,66 +327,117 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/10/初探网络编程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/09/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-09T07:19:38.277Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello Guoyouworld</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/09/hello-world/">Hello Guoyouworld</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/散文//" class="article-tag-list-link color3">散文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -299,8 +461,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
