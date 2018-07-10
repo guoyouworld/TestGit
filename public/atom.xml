@@ -5,9 +5,9 @@
   <subtitle>我家有块自留地,有青草,有西瓜.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://guoyouworld.github.io/"/>
   <updated>2018-07-10T07:21:37.013Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://guoyouworld.github.io/</id>
   
   <author>
     <name>kaliey</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>初探网络编程</title>
-    <link href="http://yoursite.com/2018/07/10/%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://yoursite.com/2018/07/10/初探网络编程/</id>
+    <link href="https://guoyouworld.github.io/2018/07/10/%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>https://guoyouworld.github.io/2018/07/10/初探网络编程/</id>
     <published>2018-07-10T06:09:46.000Z</published>
     <updated>2018-07-10T07:21:37.013Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+      <category term="Java" scheme="https://guoyouworld.github.io/categories/Java/"/>
     
     
-      <category term="网络编程" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+      <category term="网络编程" scheme="https://guoyouworld.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
+      <category term="Socket" scheme="https://guoyouworld.github.io/tags/Socket/"/>
     
   </entry>
   
   <entry>
     <title>Hello Guoyouworld</title>
-    <link href="http://yoursite.com/2018/07/09/hello-world/"/>
-    <id>http://yoursite.com/2018/07/09/hello-world/</id>
+    <link href="https://guoyouworld.github.io/2018/07/09/hello-world/"/>
+    <id>https://guoyouworld.github.io/2018/07/09/hello-world/</id>
     <published>2018-07-09T07:19:38.277Z</published>
     <updated>2018-07-10T03:20:41.893Z</updated>
     
@@ -55,10 +55,10 @@
     
     </summary>
     
-      <category term="散文" scheme="http://yoursite.com/categories/%E6%95%A3%E6%96%87/"/>
+      <category term="散文" scheme="https://guoyouworld.github.io/categories/%E6%95%A3%E6%96%87/"/>
     
     
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://guoyouworld.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
