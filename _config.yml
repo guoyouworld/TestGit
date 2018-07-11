@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace:
@@ -75,6 +75,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 #theme: landscape
 theme: yilia
+#theme: next
+
+
 stylus:
   compress: true
 # Deployment

@@ -92,7 +92,7 @@ disqus: false
 
 #5、Gitment
 gitment_owner: guoyouworld      #你的 GitHub ID
-gitment_repo: ''          #存储评论的 repo
+gitment_repo: 'guoyouworld.github.io'          #存储评论的 repo
 gitment_oauth:
   client_id: ''           #client ID
   client_secret: ''       #client secret
