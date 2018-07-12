@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://guoyouworld.github.io">
-  <title>Archives: 2018/7 | guoyouworld</title>
+  <title>Git强制推送 | guoyouworld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="guoyouworld">
-<meta property="og:url" content="https://guoyouworld.github.io/archives/2018/07/index.html">
+  <meta name="description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
+<meta name="keywords" content="reset,remote,pull,push">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git强制推送">
+<meta property="og:url" content="https://guoyouworld.github.io/2018/07/12/Git强制推送/index.html">
 <meta property="og:site_name" content="guoyouworld">
+<meta property="og:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-12T01:24:56.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guoyouworld">
+<meta name="twitter:title" content="Git强制推送">
+<meta name="twitter:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
   
     <link rel="alternative" href="/atom.xml" title="guoyouworld" type="application/atom+xml">
   
@@ -158,24 +163,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Git强制推送" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Git强制推送
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/Git强制推送/" class="archive-article-date">
+
+        
+        <a href="/2018/07/12/Git强制推送/" class="archive-article-date">
   	<time datetime="2018-07-12T01:16:50.000Z" itemprop="datePublished">2018-07-12</time>
   	<span id="busuanzi_container_page_pv" style="color:DarkGray">
       view <span id="busuanzi_value_page_pv"></span> times
@@ -184,16 +184,71 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/Git强制推送/">Git强制推送</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" >
+                <span class="btn-bg"></span>
+                <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article" style="display:none">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              function showToc(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:block");
+                  show_toc_btn.setAttribute("style","display:none");
+                };
+              function showBtn(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:none");
+                  show_toc_btn.setAttribute("style","display:block");
+                };
+             </script>
+              
+        <!-- 目录内容结束 -->
+        <p>如何替换远程仓库内容？<br>如何替换本地仓库修改？<br><a id="more"></a></p>
+<h3 id="远程仓库替换"><a href="#远程仓库替换" class="headerlink" title="远程仓库替换"></a>远程仓库替换</h3><p>放弃远程仓库所有内容，用本地内容进行替换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;url&gt;</span><br><span class="line">git push --force --<span class="built_in">set</span>-upstream origin master</span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h3 id="本地仓库替换"><a href="#本地仓库替换" class="headerlink" title="本地仓库替换"></a>本地仓库替换</h3><p>放弃本地仓库所有修改，用远程内容进行替换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD  </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -217,7 +272,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -230,131 +285,117 @@
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/10/初探网络编程/" class="archive-article-date">
-  	<time datetime="2018-07-10T06:09:46.000Z" itemprop="datePublished">2018-07-10</time>
-  	<span id="busuanzi_container_page_pv" style="color:DarkGray">
-      view <span id="busuanzi_value_page_pv"></span> times
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
     </span>
-</a>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/10/初探网络编程/">初探网络编程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络编程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Socket</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/09/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-09T07:19:38.277Z" itemprop="datePublished">2018-07-09</time>
-  	<span id="busuanzi_container_page_pv" style="color:DarkGray">
-      view <span id="busuanzi_value_page_pv"></span> times
+      </div>
     </span>
-</a>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+  </div>
+</div>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/09/hello-world/">Hello Guoyouworld</a>
-    </h1>
-  
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://guoyouworld.github.io/2018/07/12/Git强制推送/" alt="微信分享二维码">
+    </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/散文//" class="article-tag-list-link color3">散文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/10/初探网络编程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初探网络编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -378,8 +419,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
