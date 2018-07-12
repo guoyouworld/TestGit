@@ -10,14 +10,14 @@ toc: true
 <!--more-->
 ### 远程仓库替换
 放弃远程仓库所有内容，用本地内容进行替换。
-``` bash
+``` prettyprint
 git remote add origin <url>
 git push --force --set-upstream origin master
 ```
 <br>
 ### 本地仓库替换
 放弃本地仓库所有修改，用远程内容进行替换。
-``` bash
+``` prettyprint
 git reset --hard HEAD  
 git pull
 ```

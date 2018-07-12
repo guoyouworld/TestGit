@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="guoyouworld">
 <meta property="og:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-12T01:27:17.180Z">
+<meta property="og:updated_time" content="2018-07-12T02:18:43.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git强制推送">
 <meta name="twitter:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
@@ -42,7 +42,7 @@
   
 
   <!--prettify代码高亮主题css引入-->
-  <link href="/plugins/prettify.css" rel="stylesheet">
+  <link href="/plugins/prettify/themes/atelier-forest-dark.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -220,12 +220,12 @@
         <!-- 目录内容结束 -->
         <p>如何替换远程仓库内容？<br>如何替换本地仓库修改？<br><a id="more"></a></p>
 <h3 id="远程仓库替换"><a href="#远程仓库替换" class="headerlink" title="远程仓库替换"></a>远程仓库替换</h3><p>放弃远程仓库所有内容，用本地内容进行替换。</p>
-<pre><code class="bash">git remote add origin &lt;url&gt;
+<pre><code class="prettyprint">git remote add origin &lt;url&gt;
 git push --force --set-upstream origin master
 </code></pre>
 <p><br></p>
 <h3 id="本地仓库替换"><a href="#本地仓库替换" class="headerlink" title="本地仓库替换"></a>本地仓库替换</h3><p>放弃本地仓库所有修改，用远程内容进行替换。</p>
-<pre><code class="bash">git reset --hard HEAD  
+<pre><code class="prettyprint">git reset --hard HEAD  
 git pull
 </code></pre>
 
@@ -438,8 +438,8 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 
 <!--prettify代码高亮脚本引入-->
-<script src="/plugins/jquery-3.2.1.js"></script>
-<script src="/plugins/prettify.js"></script>
+<script src="/plugins/prettify/jquery-1.6.1.min.js"></script>
+<script src="/plugins/prettify/prettify.js"></script>
 <script type="text/javascript">
 $(window).load(function(){
 $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
@@ -499,15 +499,15 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
