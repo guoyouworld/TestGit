@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="guoyouworld">
 <meta property="og:description" content="网络编程有什么用？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-12T02:08:05.954Z">
+<meta property="og:updated_time" content="2018-07-12T07:03:12.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初探网络编程">
 <meta name="twitter:description" content="网络编程有什么用？">
@@ -94,8 +94,6 @@
 		        
 					<a class="weibo" target="_blank" href="https://www.weibo.com/5049722638/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-hai-meng-19/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
@@ -136,8 +134,6 @@
 						<a class="github" target="_blank" href="https://github.com/guoyouworld/" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="https://www.weibo.com/5049722638/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/zheng-hai-meng-19/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
@@ -200,7 +196,7 @@
             <div id="toc-article" class="toc-article" style="display:none">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Socket"><span class="toc-number">4.</span> <span class="toc-text">Socket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP发送数据"><span class="toc-number">5.</span> <span class="toc-text">UDP发送数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP接收数据"><span class="toc-number">6.</span> <span class="toc-text">UDP接收数据</span></a></li></ol>
             </div>
             <script type="text/javascript">
               function showToc(){
@@ -227,7 +223,7 @@
 <li>定义通信规则，通常被称为<code>协议</code></li>
 </ol>
 </blockquote>
-<p><br></p>
+<p><br><br></p>
 <h3 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h3><p>数据一层一层，从上到下进行封装，最终发送到对端，由对端网络模型一层一层进行解析。</p>
 <table>
 <thead>
@@ -267,17 +263,78 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
+<p><br><br></p>
 <h3 id="网络三要素"><a href="#网络三要素" class="headerlink" title="网络三要素"></a>网络三要素</h3><blockquote>
 <p><strong>IP地址</strong><br>&ensp;&ensp;&ensp;&ensp;java对象：<code>InetAddress</code></p>
 <pre><code class="prettyprint">InetAddress localhost = InetAddress.getLocalHost();
 System.out.println(localhost.toString());
 </code></pre>
+</blockquote>
+<blockquote>
 <p><strong>端口</strong><br>&ensp;&ensp;&ensp;&ensp;为了标识这些发送和接收消息的应用程序，所以给这些应用程序用数字标识，这些数字叫做端口。</p>
 </blockquote>
 <blockquote>
 <p><strong>传输协议</strong><br>&ensp;&ensp;&ensp;&ensp;<strong>UDP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;不需要建立连接<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;将数据和源和目的地封装成数据包（Max：64K）<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;面向无连接，速度快，不可靠协议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;通常：（速度快）(不需要保存，可以丢包)<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;聊天室：feiq<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;屏幕共享<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;网络视频会议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;邮寄快递，对讲机<br><br><br>&ensp;&ensp;&ensp;&ensp;<strong>TCP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;建立连接，形成传输数据通道<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;在连接中进行大数据传输<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手完成连接，可靠的通信<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;相率相对低<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;打电话<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手：<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：张三你在么？<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;张三：我在。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：我知道了。</p>
 </blockquote>
+<p><br><br></p>
+<h3 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h3><ul>
+<li>为网络服务提供的一种机制</li>
+<li>通信两端都有socket</li>
+<li>网络通信其实就是socket间的通信</li>
+<li>数据在两个socket间io传输<br><br><br><h3 id="UDP发送数据"><a href="#UDP发送数据" class="headerlink" title="UDP发送数据"></a>UDP发送数据</h3><strong>对象：</strong></li>
+<li><code>DatagramSocket</code> 发送和接收数据包</li>
+<li><code>DatagramPacket</code> 数据包<br><br><br><strong>发送数据流程：</strong><br>&ensp;&ensp;&ensp;&ensp;1.建立udp socket服务<br>&ensp;&ensp;&ensp;&ensp;2.提供数据，并将数据封装到数据包中<br>&ensp;&ensp;&ensp;&ensp;3.通过socket服务的发送功能将数据包发出<br>&ensp;&ensp;&ensp;&ensp;4.关闭资源</li>
+</ul>
+<pre><code class="prettyprint">import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class UdpSend {
+    public static void main(String[] args)throws Exception {
+        //1.建立socket服务
+        DatagramSocket dSocket = new DatagramSocket();
+
+        byte[] buf = &quot;hello udp&quot;.getBytes();
+        InetAddress address = InetAddress.getByName(&quot;127.0.0.1&quot;);
+        int port=10000;
+
+        //2.将数据封包
+        DatagramPacket dPacket = new DatagramPacket(buf, buf.length, address, port);
+
+        //3.发送数据
+        dSocket.send(dPacket);
+
+        //4.关闭资源
+        dSocket.close();
+    }
+}
+</code></pre>
+<p><br><br></p>
+<h3 id="UDP接收数据"><a href="#UDP接收数据" class="headerlink" title="UDP接收数据"></a>UDP接收数据</h3><p><strong>对象：</strong></p>
+<ul>
+<li><code>DatagramSocket</code> 发送和接收数据包</li>
+<li><code>DatagramPacket</code> 数据包<br><br><br><strong>接收流程:</strong><br>&ensp;&ensp;&ensp;&ensp;1.定义udp socket 服务<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;通常监听一个端口，方便明确哪些数据过来应用程序可以处理<br>&ensp;&ensp;&ensp;&ensp;2.定义一个数据包，用于存储接收到的字节数据<br>&ensp;&ensp;&ensp;&ensp;3.通过socket服务的receive方法，将接受到的数据放入定义好的数据包中<br>&ensp;&ensp;&ensp;&ensp;4.通过数据包对象的特有功能，将不同的数据取出<br>&ensp;&ensp;&ensp;&ensp;5.关闭资源</li>
+</ul>
+<pre><code class="prettyprint">import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class UdpReceive {
+    public static void main(String[] args) throws Exception {
+        //1、定义udp socket服务，并监听端口
+        DatagramSocket dSocket =  new DatagramSocket(10000);
+        //2、定义数据包对象，用于存放数据
+        byte[] buf =  new byte[1024];
+        DatagramPacket p =new DatagramPacket(buf, buf.length);
+        //3、接收数据
+        dSocket.receive(p);
+        //4、获取数据
+        String string = new String(buf,0,buf.length);
+        System.out.println(string);
+        //5、关闭资源
+        dSocket.close();
+    }
+}
+</code></pre>
 
       
 
@@ -435,7 +492,7 @@ System.out.println(localhost.toString());
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是网络编程？"><span class="toc-number">1.</span> <span class="toc-text">什么是网络编程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络模型"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络三要素"><span class="toc-number">3.</span> <span class="toc-text">网络三要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Socket"><span class="toc-number">4.</span> <span class="toc-text">Socket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP发送数据"><span class="toc-number">5.</span> <span class="toc-text">UDP发送数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP接收数据"><span class="toc-number">6.</span> <span class="toc-text">UDP接收数据</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -659,7 +716,7 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">自家地&lt;br&gt;&lt;br&gt;瓜果都很甜&lt;br&gt;青草也很健康</div>
   	  	
     	</section>
     

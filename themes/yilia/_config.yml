@@ -8,7 +8,7 @@ menu:
 subnav:
   github: "https://github.com/guoyouworld/"
   weibo: "https://www.weibo.com/5049722638/profile?topnav=1&wvr=6"
-  rss: "#"
+  #rss: "#"
   zhihu: "https://www.zhihu.com/people/zheng-hai-meng-19/activities"
   #qq: "#"
   #weixin: "#"
@@ -127,4 +127,4 @@ friends:
   友情链接5: http://localhost:4000/
   友情链接6: http://localhost:4000/
 
-aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+aboutme: 自家地<br><br>瓜果都很甜<br>青草也很健康
