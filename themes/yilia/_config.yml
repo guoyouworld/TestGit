@@ -94,8 +94,8 @@ disqus: false
 gitment_owner: guoyouworld      #你的 GitHub ID
 gitment_repo: 'guoyouworld.github.io'          #存储评论的 repo
 gitment_oauth:
-  client_id: '9ede080481ce26423e87'           #client ID
-  client_secret: '4957eeb41bcb0769676feaed65a26d671a4b942c'       #client secret
+  client_id: '6a3b53f2607dc5806364'           #client ID
+  client_secret: '7d18e6340b6858fdbc3bf54ae73747a23ef79d2c'       #client secret
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
