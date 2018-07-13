@@ -1,7 +1,6 @@
 ---
 title: Git强制推送
 date: 2018-07-12 09:16:50
-categories : Git
 tags: [git,github]
 toc: true
 ---
