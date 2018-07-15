@@ -36,3 +36,8 @@ GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1
 
 ![failed](https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png)
 哇，心态炸了，不写了...
+
+***
+
+![我回来了](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531561272766&di=a06271af073440cb91ef02d3a37ffe3e&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg)
+开个玩笑，学习要紧，学习要紧...
