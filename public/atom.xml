@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guoyouworld.github.io/"/>
-  <updated>2018-07-14T06:57:51.089Z</updated>
+  <updated>2018-07-16T01:48:44.254Z</updated>
   <id>https://guoyouworld.github.io/</id>
   
   <author>
@@ -17,13 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>遇到问题该怎么办[思路探索中...]</title>
+    <link href="https://guoyouworld.github.io/2018/07/16/%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E-%E6%80%9D%E8%B7%AF%E6%8E%A2%E7%B4%A2%E4%B8%AD/"/>
+    <id>https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/</id>
+    <published>2018-07-16T01:34:40.000Z</published>
+    <updated>2018-07-16T01:48:44.254Z</updated>
+    
+    <content type="html"><![CDATA[<p>程序出现bug？矿泉水瓶打不开？？我们该怎么办？<br><a id="more"></a></p><h3 id="不要慌"><a href="#不要慌" class="headerlink" title="不要慌"></a>不要慌</h3><p>首先要明白，方法总比困难多，不要慌！！<strong>这是好事</strong>。</p><blockquote><p>有问题才有提高的可能，将问题归类，记下来。<br>以后遇到可以从自己的数据库找到解决方案，才不枉费我们的努力。<br>若是被绊倒后拍拍屁股继续走了，下次还会再次被绊倒，不会觉得很傻？</p></blockquote><p><br><br></p><h3 id="怎么办"><a href="#怎么办" class="headerlink" title="怎么办"></a>怎么办</h3><ol><li>找个地方将问题<strong>写下来</strong></li><li>搞明白是什么问题，找出精确<strong>有效的</strong>信息。</li><li><strong>只描述症状，不描述猜想</strong></li><li>按照<strong>时间顺序</strong>描述</li><li>去除无意义的疑问<br><br><br><h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;程序出现bug？矿泉水瓶打不开？？我们该怎么办？&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://guoyouworld.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spring源码深度解析[持续更新中...]</title>
     <link href="https://guoyouworld.github.io/2018/07/13/Spring%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/"/>
     <id>https://guoyouworld.github.io/2018/07/13/Spring源码深度解析/</id>
     <published>2018-07-13T05:53:00.000Z</published>
-    <updated>2018-07-14T06:57:51.089Z</updated>
+    <updated>2018-07-16T01:50:41.707Z</updated>
     
-    <content type="html"><![CDATA[<p>Spring源码深度解析读书笔记…<br><a id="more"></a></p><h3 id="Spring的整体架构"><a href="#Spring的整体架构" class="headerlink" title="Spring的整体架构"></a>Spring的整体架构</h3><p><img src="https://user-images.githubusercontent.com/21979120/42675065-e926e4dc-86a4-11e8-9f6c-38950ea6e1fa.png" alt="Spring的整体架构"></p><h3 id="Spring环境搭建"><a href="#Spring环境搭建" class="headerlink" title="Spring环境搭建"></a>Spring环境搭建</h3><p>到你想要储存源码的目录执行下面的语句（git安装不用讲了吧）</p><pre><code class="prettyprint">git clone https://github.com/spring-projects/spring-framework.git</code></pre><p>实在不会Git可以到<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">Spring托管网站</a>去下载。</p><p>下载完成后,到想要学习的目录执行下面的命令（例如：spring-core目录）：</p><pre><code class="prettyprint">gradle cleanidea eclipse</code></pre><p>然后导入eclipse…</p><hr><p>额，书上是这么说的，我去试试…<br>坑啊：<code>bash: gradle: command not found</code><br>…<br>回过头来发现，需要安装一个gradle构建工具<br>安装地址：<a href="https://gradle.org/releases/" target="_blank" rel="noopener">https://gradle.org/releases/</a><br><img src="https://user-images.githubusercontent.com/21979120/42677677-10c2b674-86af-11e8-873d-ad189795f938.png" alt="下载位置"><br><strong>配置环境变量：</strong><br>GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1<br>%GRADLE_HOME%\bin;<br><sub>配置完记得重启git，要不然还是找不到命令，别问我是怎么知道的….</sub></p><p><img src="https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png" alt="failed"><br>哇，心态炸了，不写了…</p><hr><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531561272766&amp;di=a06271af073440cb91ef02d3a37ffe3e&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg" alt="我回来了"><br>开个玩笑，学习要紧，学习要紧…</p>]]></content>
+    <content type="html"><![CDATA[<p>Spring源码深度解析读书笔记…<br><a id="more"></a></p><h3 id="Spring的整体架构"><a href="#Spring的整体架构" class="headerlink" title="Spring的整体架构"></a>Spring的整体架构</h3><p><img src="https://user-images.githubusercontent.com/21979120/42675065-e926e4dc-86a4-11e8-9f6c-38950ea6e1fa.png" alt="Spring的整体架构"></p><h3 id="Spring环境搭建"><a href="#Spring环境搭建" class="headerlink" title="Spring环境搭建"></a>Spring环境搭建</h3><p>到你想要储存源码的目录执行下面的语句（git安装不用讲了吧）</p><pre><code class="prettyprint">git clone https://github.com/spring-projects/spring-framework.git</code></pre><p>实在不会Git可以到<a href="https://github.com/spring-projects/spring-framework" target="_blank" rel="noopener">Spring托管网站</a>去下载。</p><p>下载完成后,到想要学习的目录执行下面的命令（例如：spring-core目录）：</p><pre><code class="prettyprint">gradle cleanidea eclipse</code></pre><p>然后导入eclipse…</p><hr><p>额，书上是这么说的，我去试试…<br>坑啊：<code>bash: gradle: command not found</code><br>…<br>回过头来发现，需要安装一个gradle构建工具<br>安装地址：<a href="https://gradle.org/releases/" target="_blank" rel="noopener">https://gradle.org/releases/</a><br><img src="https://user-images.githubusercontent.com/21979120/42677677-10c2b674-86af-11e8-873d-ad189795f938.png" alt="下载位置"><br><strong>配置环境变量：</strong><br>GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1<br>%GRADLE_HOME%\bin;<br><sub>配置完记得重启git，要不然还是找不到命令，别问我是怎么知道的….</sub></p><p><img src="https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png" alt="failed"><br>哇，心态炸了，不写了…</p><hr><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531561272766&amp;di=a06271af073440cb91ef02d3a37ffe3e&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg" alt="我回来了"><br>开个玩笑，学习要紧，学习要紧…</p><h3 id="遇到问题怎么办？"><a href="#遇到问题怎么办？" class="headerlink" title="遇到问题怎么办？"></a>遇到问题怎么办？</h3><ul><li>找个地方将问题写下来</li><li>搞明白是什么问题，找出精确有效的信息。</li><li>只描述症状，不描述猜想</li><li>按照时间顺序描述</li><li>去除无意义的疑问<br>我觉得这块可以作为一篇新的<a href="https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/">文章</a>…</li></ul>]]></content>
     
     <summary type="html">
     
@@ -43,7 +63,7 @@
     <link href="https://guoyouworld.github.io/2018/07/13/sql%E5%AE%9E%E7%8E%B0%E7%B1%BB%E4%BC%BC%E5%88%86%E6%9E%90%E5%87%BD%E6%95%B0over%20partition%20by%E5%8A%9F%E8%83%BD/"/>
     <id>https://guoyouworld.github.io/2018/07/13/sql实现类似分析函数over partition by功能/</id>
     <published>2018-07-13T02:26:02.000Z</published>
-    <updated>2018-07-13T14:09:26.659Z</updated>
+    <updated>2018-07-13T02:42:28.939Z</updated>
     
     <content type="html"><![CDATA[<p>近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。<br>So ……<br><a id="more"></a></p><h3 id="明确需求"><a href="#明确需求" class="headerlink" title="明确需求"></a>明确需求</h3><p>我们需要取所有数据，如果某一字段有重复从字段重复数据内取一条时间最近接近现在时间的.</p><blockquote><ul><li>(假设id重复)</li><li>(假设存时间的字段为dtime)</li><li>(假设表明为tableName)</li></ul></blockquote><p><strong>在oracle内实现：</strong></p><pre><code class="prettyprint">select * from (select a.*,row_number() over(partition by id order by dtime desc) rnfrom tableName)where rn =1;</code></pre><p><br></p><p><strong>类似的功能在没有分析函数的数据库：</strong></p><pre><code class="prettyprint">select *,(select count(1) from tableName b where id=b.id and dtime&lt;b.dtime ) rnfrom tableNamewhere rn=0</code></pre>]]></content>
     
@@ -65,7 +85,7 @@
     <link href="https://guoyouworld.github.io/2018/07/12/Git%E5%BC%BA%E5%88%B6%E6%8E%A8%E9%80%81/"/>
     <id>https://guoyouworld.github.io/2018/07/12/Git强制推送/</id>
     <published>2018-07-12T01:16:50.000Z</published>
-    <updated>2018-07-13T14:09:26.657Z</updated>
+    <updated>2018-07-13T02:22:42.168Z</updated>
     
     <content type="html"><![CDATA[<p>如何替换远程仓库内容？<br>如何替换本地仓库修改？<br><a id="more"></a></p><h3 id="远程仓库替换"><a href="#远程仓库替换" class="headerlink" title="远程仓库替换"></a>远程仓库替换</h3><p>放弃远程仓库所有内容，用本地内容进行替换。</p><pre><code class="prettyprint">git remote add origin &lt;url&gt;git push --force --set-upstream origin master</code></pre><p><br></p><h3 id="本地仓库替换"><a href="#本地仓库替换" class="headerlink" title="本地仓库替换"></a>本地仓库替换</h3><p>放弃本地仓库所有修改，用远程内容进行替换。</p><pre><code class="prettyprint">git reset --hard HEAD  git pull</code></pre>]]></content>
     
@@ -87,7 +107,7 @@
     <link href="https://guoyouworld.github.io/2018/07/10/%E5%88%9D%E6%8E%A2%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     <id>https://guoyouworld.github.io/2018/07/10/初探网络编程/</id>
     <published>2018-07-10T06:09:46.000Z</published>
-    <updated>2018-07-13T14:09:26.689Z</updated>
+    <updated>2018-07-13T02:23:08.213Z</updated>
     
     <content type="html"><![CDATA[<p>网络编程有什么用？<br><a id="more"></a></p><h3 id="什么是网络编程？"><a href="#什么是网络编程？" class="headerlink" title="什么是网络编程？"></a>什么是网络编程？</h3><p>&ensp;&ensp;&ensp;&ensp;老丁的电脑将本地数据进行<code>打包</code>，通过网络将包<code>扔出去</code>，网络另一端的小红的电脑将数据包<code>解开</code>，达到<strong>通信<sub>(眉目传情)</sub></strong>的效果。<br>&ensp;&ensp;&ensp;&ensp;老丁通过微信发了一条消息给小红，可能觉得凉的不够快，又通过qq给小红的闺蜜发了一条，顺便还浏览一个不可描述的网页，这样小红的微信和闺蜜的qq几乎同时收到了老丁的信息，老丁也打开了浏览器的相关页面。<br>&ensp;&ensp;&ensp;&ensp;嗯，我们发现，<strong>网络通信其实是两个进程之间的通信。</strong></p><blockquote><ol><li>找到对方<code>IP</code></li><li>数据要发送到对方指定的应用程序上<code>端口</code></li><li>定义通信规则，通常被称为<code>协议</code></li></ol></blockquote><p><br><br></p><h3 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h3><p>数据一层一层，从上到下进行封装，最终发送到对端，由对端网络模型一层一层进行解析。</p><table><thead><tr><th style="text-align:left">OSI</th><th style="text-align:left">TCP/IP</th></tr></thead><tbody><tr><td style="text-align:left">应用层</td><td style="text-align:left">应用层</td></tr><tr><td style="text-align:left">表示层</td><td style="text-align:left"></td></tr><tr><td style="text-align:left">会话层</td><td style="text-align:left"></td></tr><tr><td style="text-align:left">传输层</td><td style="text-align:left">传输层</td></tr><tr><td style="text-align:left">网络层</td><td style="text-align:left">网络层</td></tr><tr><td style="text-align:left">数据链路层</td><td style="text-align:left"></td></tr><tr><td style="text-align:left">物理层</td><td style="text-align:left">主机至网络层</td></tr></tbody></table><p><br><br></p><h3 id="网络三要素"><a href="#网络三要素" class="headerlink" title="网络三要素"></a>网络三要素</h3><blockquote><p><strong>IP地址</strong><br>&ensp;&ensp;&ensp;&ensp;java对象：<code>InetAddress</code></p><pre><code class="prettyprint">InetAddress localhost = InetAddress.getLocalHost();System.out.println(localhost.toString());</code></pre></blockquote><blockquote><p><strong>端口</strong><br>&ensp;&ensp;&ensp;&ensp;为了标识这些发送和接收消息的应用程序，所以给这些应用程序用数字标识，这些数字叫做端口。</p></blockquote><blockquote><p><strong>传输协议</strong><br>&ensp;&ensp;&ensp;&ensp;<strong>UDP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;不需要建立连接<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;将数据和源和目的地封装成数据包（Max：64K）<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;面向无连接，速度快，不可靠协议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;通常：（速度快）(不需要保存，可以丢包)<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;聊天室：feiq<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;屏幕共享<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;网络视频会议<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;邮寄快递，对讲机<br><br><br>&ensp;&ensp;&ensp;&ensp;<strong>TCP</strong><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;建立连接，形成传输数据通道<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;在连接中进行大数据传输<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手完成连接，可靠的通信<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;相率相对低<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;打电话<br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;三次握手：<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：张三你在么？<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;张三：我在。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;老师：我知道了。</p></blockquote><p><br><br></p><h3 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h3><ul><li>为网络服务提供的一种机制</li><li>通信两端都有socket</li><li>网络通信其实就是socket间的通信</li><li>数据在两个socket间io传输<br><br><br><h3 id="UDP发送数据"><a href="#UDP发送数据" class="headerlink" title="UDP发送数据"></a>UDP发送数据</h3><strong>对象：</strong></li><li><code>DatagramSocket</code> 发送和接收数据包</li><li><code>DatagramPacket</code> 数据包<br><br><br><strong>发送数据流程：</strong><br>&ensp;&ensp;&ensp;&ensp;1.建立udp socket服务<br>&ensp;&ensp;&ensp;&ensp;2.提供数据，并将数据封装到数据包中<br>&ensp;&ensp;&ensp;&ensp;3.通过socket服务的发送功能将数据包发出<br>&ensp;&ensp;&ensp;&ensp;4.关闭资源</li></ul><pre><code class="prettyprint">import java.net.DatagramPacket;import java.net.DatagramSocket;import java.net.InetAddress;public class UdpSend {    public static void main(String[] args)throws Exception {        //1.建立socket服务        DatagramSocket dSocket = new DatagramSocket();        byte[] buf = &quot;hello udp&quot;.getBytes();        InetAddress address = InetAddress.getByName(&quot;127.0.0.1&quot;);        int port=10000;        //2.将数据封包        DatagramPacket dPacket = new DatagramPacket(buf, buf.length, address, port);        //3.发送数据        dSocket.send(dPacket);        //4.关闭资源        dSocket.close();    }}</code></pre><p><br><br></p><h3 id="UDP接收数据"><a href="#UDP接收数据" class="headerlink" title="UDP接收数据"></a>UDP接收数据</h3><p><strong>对象：</strong></p><ul><li><code>DatagramSocket</code> 发送和接收数据包</li><li><code>DatagramPacket</code> 数据包<br><br><br><strong>接收流程:</strong><br>&ensp;&ensp;&ensp;&ensp;1.定义udp socket 服务<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;通常监听一个端口，方便明确哪些数据过来应用程序可以处理<br>&ensp;&ensp;&ensp;&ensp;2.定义一个数据包，用于存储接收到的字节数据<br>&ensp;&ensp;&ensp;&ensp;3.通过socket服务的receive方法，将接受到的数据放入定义好的数据包中<br>&ensp;&ensp;&ensp;&ensp;4.通过数据包对象的特有功能，将不同的数据取出<br>&ensp;&ensp;&ensp;&ensp;5.关闭资源</li></ul><pre><code class="prettyprint">import java.net.DatagramPacket;import java.net.DatagramSocket;public class UdpReceive {    public static void main(String[] args) throws Exception {        //1、定义udp socket服务，并监听端口        DatagramSocket dSocket =  new DatagramSocket(10000);        //2、定义数据包对象，用于存放数据        byte[] buf =  new byte[1024];        DatagramPacket p =new DatagramPacket(buf, buf.length);        //3、接收数据        dSocket.receive(p);        //4、获取数据        String string = new String(buf,0,buf.length);        System.out.println(string);        //5、关闭资源        dSocket.close();    }}</code></pre>]]></content>
     
@@ -109,7 +129,7 @@
     <link href="https://guoyouworld.github.io/2018/07/09/hello-world/"/>
     <id>https://guoyouworld.github.io/2018/07/09/hello-world/</id>
     <published>2018-07-09T06:15:30.000Z</published>
-    <updated>2018-07-13T14:09:26.659Z</updated>
+    <updated>2018-07-13T06:08:45.384Z</updated>
     
     <content type="html"><![CDATA[<p>竹篮打水，最终什么都留不下，那为什么不套一个塑料袋呢…<br><a id="more"></a></p><blockquote><ul><li>技术再强，一段时间不用也会逐渐忘记，何况技术还不是那么强。</li></ul></blockquote><p><br><br><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531789852&amp;di=33f8076d0416efcde2979de3259fcd14&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fepaper.shaoyangnews.net%2Fepaper%2Fsywb%2Fhtml%2F2015%2F05%2F08%2F07%2Fimages%2F3.jpg" alt="竹篮打水"></p>]]></content>
     

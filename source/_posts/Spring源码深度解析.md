@@ -41,3 +41,12 @@ GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1
 
 ![我回来了](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531561272766&di=a06271af073440cb91ef02d3a37ffe3e&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg)
 开个玩笑，学习要紧，学习要紧...
+
+
+### 遇到问题怎么办？
+* 找个地方将问题写下来
+* 搞明白是什么问题，找出精确有效的信息。
+* 只描述症状，不描述猜想
+* 按照时间顺序描述
+* 去除无意义的疑问
+我觉得这块可以作为一篇新的[文章](https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/)...
