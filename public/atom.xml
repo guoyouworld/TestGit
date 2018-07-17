@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guoyouworld.github.io/"/>
-  <updated>2018-07-16T01:48:44.254Z</updated>
+  <updated>2018-07-17T02:39:43.936Z</updated>
   <id>https://guoyouworld.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git服务器搭建</title>
+    <link href="https://guoyouworld.github.io/2018/07/17/Git%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <id>https://guoyouworld.github.io/2018/07/17/Git服务器搭建/</id>
+    <published>2018-07-17T01:56:39.000Z</published>
+    <updated>2018-07-17T02:39:43.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>在公司内网搭建git服务器…<br><a id="more"></a><br>公司源码比较重要，所以为了版本控制和代码安全需要在公司服务器上搭建git</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol><li>下载<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">git</a></li><li>解压tar包<pre><code class="prettyprint">tar -zxvf git-2.8.3.tar.gzcd git-2.8.3</code></pre></li><li>配置安装<pre><code class="prettyprint">make configure./configure prefix=/usr/local/git/make &amp;&amp; make installgit --version</code></pre></li><li>配置环境变量<pre><code class="prettyprint">export PATH=$PATH:/usr/local/git/bin</code></pre><br><br><h3 id="本地创建公钥-本地客户端"><a href="#本地创建公钥-本地客户端" class="headerlink" title="本地创建公钥[本地客户端]"></a>本地创建公钥<strong>[本地客户端]</strong></h3>相当于一般网站注册账号<pre><code class="prettyprint">ssh-keygen -t rsa</code></pre>设置密码<br><img src="https://user-images.githubusercontent.com/21979120/42792895-076846d6-89aa-11e8-94b0-8724f36195ea.png" alt="输入密码"><br>一路回车</li></ol><p>将生成的id_rsa.pub文件里面的内容拷贝到服务端的<strong>authorized_keys</strong>文件<br><img src="https://user-images.githubusercontent.com/21979120/42792976-6c52dfb6-89aa-11e8-97f0-13dd220ab0d0.png" alt="id_rsa.pub"></p><p><br><br></p><h3 id="服务端储存公钥文件-服务器"><a href="#服务端储存公钥文件-服务器" class="headerlink" title="服务端储存公钥文件[服务器]"></a>服务端储存公钥文件<strong>[服务器]</strong></h3><pre><code class="prettyprint">adduser gitsu - gitmkdir .sshchmod 700 .sshtouch ~/.ssh/authorized_keyschmod 644 ~/.ssh/authorized_keysvi ~/.ssh/authorized_keys</code></pre><p>把本地的<code>id_rsa.pub</code>里面的内容复制到<code>~/.ssh/authorized_keys</code><br><br><br></p><h3 id="禁用shell登陆-可选"><a href="#禁用shell登陆-可选" class="headerlink" title="禁用shell登陆[可选]"></a>禁用shell登陆<strong>[可选]</strong></h3><p>禁用后就无法 <code>su - git</code>了<br>找到git-shell目录</p><pre><code class="prettyprint">[root@**** git]# which git-shell/bin/git-shell[root@**** git]# vi /etc/passwd</code></pre><p>找到</p><pre><code class="prettyprint">git:x:1001:1001:,,,:/home/git:/bin/bash</code></pre><p>改为刚才which git-shell查到的目录<code>/bin/git-shell</code>：</p><pre><code class="prettyprint">git:x:1001:1001:,,,:/home/git:/bin/git-shell</code></pre><p><br><br></p><h3 id="初始化git仓库项目"><a href="#初始化git仓库项目" class="headerlink" title="初始化git仓库项目"></a>初始化git仓库项目</h3><p>一般禁用了shell登陆以后创建git项目，我们可以这么操作：<br>假设仓库目录为：<code>/home/git-repository/test1</code><br>创建一个空的git仓库，用本地代码覆盖远程目录</p><pre><code class="prettyprint">cd /home/git-repository/test1git initmv .git /home/git-repository/test1chown -R git /home/git-repository/test1</code></pre><p>放弃远程仓库所有内容，用本地内容进行替换。</p><pre><code class="prettyprint">git remote add origin &lt;url&gt;git push --force --set-upstream origin master</code></pre><p><br><br></p><h3 id="可能遇到的坑-异常"><a href="#可能遇到的坑-异常" class="headerlink" title="可能遇到的坑[异常]"></a>可能遇到的坑[异常]</h3><ol><li>在执行本地替换远程目录时git remote add可能会有异常：<code>fatal: remote origin already exists</code><br>解决方案：<pre><code class="prettyprint">vi .git/config</code></pre>修改url为正确的即可<br><br></li><li><code>index-pack abnormal exit</code>这个问题有很多，需要具体问题具体分析，我遇到的是<code>Permission denied</code>没有操作目录得权限<br>解决方案：<pre><code class="prettyprint">chown -R git /home/git-repository/test1</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在公司内网搭建git服务器…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="https://guoyouworld.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://guoyouworld.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>遇到问题该怎么办[思路探索中...]</title>
