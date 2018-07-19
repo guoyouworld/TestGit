@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://guoyouworld.github.io">
-  <title>Tag: phantomjs | guoyouworld</title>
+  <title>selenuim-phantomjs-java无法获取动态加载的元素 | guoyouworld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="guoyouworld">
-<meta property="og:url" content="https://guoyouworld.github.io/tags/phantomjs/index.html">
+  <meta name="description" content="iframe是js动态加载的，获取的页面没有iframe元素…">
+<meta name="keywords" content="Java,phantomjs,selenuim,异常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="selenuim-phantomjs-java无法获取动态加载的元素">
+<meta property="og:url" content="https://guoyouworld.github.io/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/index.html">
 <meta property="og:site_name" content="guoyouworld">
+<meta property="og:description" content="iframe是js动态加载的，获取的页面没有iframe元素…">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://user-images.githubusercontent.com/21979120/42928177-33126f12-8b69-11e8-9021-bea1f550974d.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532591012&di=0509f2e1fd1ec8db460ccaf5403a2d05&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.kekenet.com%2F2016%2F1216%2F81441481888940.jpg">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1444007451,2024641395&fm=27&gp=0.jpg">
+<meta property="og:updated_time" content="2018-07-19T08:09:42.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guoyouworld">
+<meta name="twitter:title" content="selenuim-phantomjs-java无法获取动态加载的元素">
+<meta name="twitter:description" content="iframe是js动态加载的，获取的页面没有iframe元素…">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/21979120/42928177-33126f12-8b69-11e8-9021-bea1f550974d.jpg">
   
     <link rel="alternative" href="/atom.xml" title="guoyouworld" type="application/atom+xml">
   
@@ -156,24 +165,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-selenuim-phantomjs-java无法获取动态加载的元素" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      selenuim-phantomjs-java无法获取动态加载的元素
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!--
+
+        
+        <!--
 <a href="/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/" class="archive-article-date">
   	<time datetime="2018-07-19T07:21:15.000Z" itemprop="datePublished">2018-07-19</time>
   	<span id="busuanzi_container_page_pv" style="color:DarkGray">
@@ -187,16 +191,155 @@
   	<time datetime="2018-07-19T07:21:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
 </a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/">selenuim-phantomjs-java无法获取动态加载的元素</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- 目录内容 -->
+        
+            <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" >
+                <span class="btn-bg"></span>
+                <span class="btn-text">文章导航</span>
+            </p>
+            <div id="toc-article" class="toc-article" style="display:none">
+                <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                <strong class="toc-title">文章目录</strong>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题现象"><span class="toc-number">1.</span> <span class="toc-text">问题现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成代码"><span class="toc-number">3.</span> <span class="toc-text">完成代码</span></a></li></ol>
+            </div>
+            <script type="text/javascript">
+              function showToc(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:block");
+                  show_toc_btn.setAttribute("style","display:none");
+                };
+              function showBtn(){
+                  var toc_article = document.getElementById("toc-article");
+                  var show_toc_btn = document.getElementById("show-toc-btn");
+                  toc_article.setAttribute("style","display:none");
+                  show_toc_btn.setAttribute("style","display:block");
+                };
+             </script>
+              
+        <!-- 目录内容结束 -->
+        <p>iframe是js动态加载的，获取的页面没有iframe元素…<br><a id="more"></a></p>
+<h3 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h3><blockquote>
+<ol>
+<li><font color="red"><strong>无法获取页面元素&lt;最直观现象&gt;</strong></font></li>
+<li>iframe是js动态加载的，获取的页面没有iframe元素</li>
+<li>富文本编辑框拿不到</li>
+<li>driver.findElement(By.id(“iframe_id”)) 抛出异常，无法找到元素</li>
+<li>driver.switchTo().frame(driver.findElement(By.id(“iframe_id”))); 这个就更不用想了，连iframe_id都拿不到switch毛啊。</li>
+</ol>
+</blockquote>
+<p>明明从chrome浏览器检查元素的时候可以看到iframe元素，<br>但是查看源代码的时候iframe就没有了…<br><img src="https://user-images.githubusercontent.com/21979120/42928177-33126f12-8b69-11e8-9021-bea1f550974d.jpg" alt="握草"><br>通过查一些资料发现：</p>
+<blockquote>
+<p>所谓源码，就是别人服务器发送到浏览器的原封不动的代码。<br>你那些在源码中找不到的代码，那是在浏览器执行js动态生成的。</p>
+</blockquote>
+<p>好！既然知道了问题所在，那我们就…<br>搜一下有没有现成的解决方案：</p>
+<blockquote>
+<p>“jQuery如何获取动态添加的元素”<br>“js如何获取动态添加的元素”<br>…</p>
+</blockquote>
+<p><strong>都说要用</strong><font color="red"><strong>jQuery on</strong> </font><strong>函数，然后…</strong></p>
+<p><font color="red"><strong>就走了大量的弯路，根本不好用好么！！！</strong></font></p>
+<p><font color="red"><strong>不好用！！！</strong></font></p>
+<p><font color="red"><strong>不好用！！！</strong></font></p>
+<p><font color="red"><strong>不好用！！！</strong></font><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1532591012&amp;di=0509f2e1fd1ec8db460ccaf5403a2d05&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fpic.kekenet.com%2F2016%2F1216%2F81441481888940.jpg" alt="我已经用了洪荒之力了"></p>
+<p><font color="red"><strong>说实话，我有点方了…</strong></font><br><br><br></p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>走投无路之下，我只能死马当活马医：<br>直接给最底层元素赋值:</p>
+<pre><code class="prettyprint">$(&quot;#textarea_id&quot;).val(&quot;hello world&quot;);
+</code></pre>
+<p><strong>哇，没想到成了，对你没有看错，成了！！！！</strong><br><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1444007451,2024641395&amp;fm=27&amp;gp=0.jpg" alt="叉会腰"></p>
+<p><br><br></p>
+<h3 id="完成代码"><a href="#完成代码" class="headerlink" title="完成代码"></a>完成代码</h3><p>平生最恨贴代码不贴jar包的人！！！</p>
+<pre><code class="prettyprint">import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+.........
+......
+..
 
-        <div class="article-info info-on-right">
-          
+public static void setTextarea(WebDriver driver,String target){
+        String url = &quot;https://bukemiaoshudeurl.com/&quot;+target;
+        driver.get(url);
+        Thread.sleep(5000);
+        JavascriptExecutor jse = (JavascriptExecutor) driver ;
+        String script = &quot;$(\&quot;#textarea_id\&quot;).val(\&quot;hello world\&quot;);\r\n&quot; +
+                &quot;$(\&quot;#textarea_submit\&quot;).trigger(\&quot;click\&quot;); &quot;;
+        jse.executeScript(script);
+    }
+</code></pre>
+<p>maven 的pom.xml</p>
+<pre><code class="prettyprint">&lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+        &lt;version&gt;2.53.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium-remote-driver&lt;/artifactId&gt;
+        &lt;version&gt;2.53.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
+        &lt;version&gt;2.53.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.codeborne&lt;/groupId&gt;
+        &lt;artifactId&gt;phantomjsdriver&lt;/artifactId&gt;
+        &lt;version&gt;1.2.1&lt;/version&gt;
+        &lt;exclusions&gt;
+            &lt;exclusion&gt;
+                &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+                &lt;artifactId&gt;selenium-remote-driver&lt;/artifactId&gt;
+            &lt;/exclusion&gt;
+            &lt;exclusion&gt;
+                &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+                &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+            &lt;/exclusion&gt;
+        &lt;/exclusions&gt;
+    &lt;/dependency&gt;
+</code></pre>
+<p>兄弟只能帮你到这了，遇到问题不要慌，就是怼！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -220,76 +363,135 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<!--
-<a href="/2018/07/17/Linux下安装phantomjs/" class="archive-article-date">
-  	<time datetime="2018-07-17T06:12:15.000Z" itemprop="datePublished">2018-07-17</time>
-  	<span id="busuanzi_container_page_pv" style="color:DarkGray">
-      view <span id="busuanzi_value_page_pv"></span> times
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
     </span>
-</a>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
--->
-<a href="/2018/07/17/Linux下安装phantomjs/" class="archive-article-date">
-  	<time datetime="2018-07-17T06:12:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/Linux下安装phantomjs/">Linux下安装phantomjs</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">phantomjs</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://guoyouworld.github.io/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/17/Linux下安装phantomjs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下安装phantomjs</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题现象"><span class="toc-number">1.</span> <span class="toc-text">问题现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完成代码"><span class="toc-number">3.</span> <span class="toc-text">完成代码</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://guoyouworld.github.io/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/",
+  owner: 'guoyouworld',
+  repo: 'guoyouworld.github.io',
+  oauth: {
+    client_id: '6a3b53f2607dc5806364',
+    client_secret: '7d18e6340b6858fdbc3bf54ae73747a23ef79d2c',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -313,9 +515,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

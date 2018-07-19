@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="guoyouworld">
 <meta property="og:description" content="程序出现bug？矿泉水瓶打不开？？我们该怎么办？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-16T01:48:44.254Z">
+<meta property="og:updated_time" content="2018-07-19T07:20:15.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遇到问题该怎么办[思路探索中...]">
 <meta name="twitter:description" content="程序出现bug？矿泉水瓶打不开？？我们该怎么办？">
@@ -232,6 +232,9 @@
 <li>按照<strong>时间顺序</strong>描述</li>
 <li>去除无意义的疑问<br><br><br><h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3></li>
 </ol>
+<p><strong>现象：</strong><br>1.无法获取页面元素<br>2.iframe是js动态加载的，获取的页面没有iframe元素<br>3.富文本编辑框拿不到</p>
+<p><strong>使用工具：</strong><br>java<br>selenuim 2.53.0<br>phantomjs-2.1.1-windows</p>
+<p><strong>思路：</strong><br>通过查资料发现问题可能出在嵌套iframe<br>但获取的源代码里面并没有iframe元素</p>
 
       
 
@@ -513,18 +516,6 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">phantomjs</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
@@ -545,6 +536,18 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">phantomjs</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">selenuim</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
             
@@ -554,6 +557,14 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Socket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
             
             <div class="clearfix"></div>

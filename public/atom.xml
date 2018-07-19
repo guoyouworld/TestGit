@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guoyouworld.github.io/"/>
-  <updated>2018-07-17T06:17:30.437Z</updated>
+  <updated>2018-07-19T08:09:42.340Z</updated>
   <id>https://guoyouworld.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>selenuim-phantomjs-java无法获取动态加载的元素</title>
+    <link href="https://guoyouworld.github.io/2018/07/19/selenuim-phantomjs-java%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%85%83%E7%B4%A0/"/>
+    <id>https://guoyouworld.github.io/2018/07/19/selenuim-phantomjs-java无法获取动态加载的元素/</id>
+    <published>2018-07-19T07:21:15.000Z</published>
+    <updated>2018-07-19T08:09:42.340Z</updated>
+    
+    <content type="html"><![CDATA[<p>iframe是js动态加载的，获取的页面没有iframe元素…<br><a id="more"></a></p><h3 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h3><blockquote><ol><li><font color="red"><strong>无法获取页面元素&lt;最直观现象&gt;</strong></font></li><li>iframe是js动态加载的，获取的页面没有iframe元素</li><li>富文本编辑框拿不到</li><li>driver.findElement(By.id(“iframe_id”)) 抛出异常，无法找到元素</li><li>driver.switchTo().frame(driver.findElement(By.id(“iframe_id”))); 这个就更不用想了，连iframe_id都拿不到switch毛啊。</li></ol></blockquote><p>明明从chrome浏览器检查元素的时候可以看到iframe元素，<br>但是查看源代码的时候iframe就没有了…<br><img src="https://user-images.githubusercontent.com/21979120/42928177-33126f12-8b69-11e8-9021-bea1f550974d.jpg" alt="握草"><br>通过查一些资料发现：</p><blockquote><p>所谓源码，就是别人服务器发送到浏览器的原封不动的代码。<br>你那些在源码中找不到的代码，那是在浏览器执行js动态生成的。</p></blockquote><p>好！既然知道了问题所在，那我们就…<br>搜一下有没有现成的解决方案：</p><blockquote><p>“jQuery如何获取动态添加的元素”<br>“js如何获取动态添加的元素”<br>…</p></blockquote><p><strong>都说要用</strong><font color="red"><strong>jQuery on</strong> </font><strong>函数，然后…</strong></p><p><font color="red"><strong>就走了大量的弯路，根本不好用好么！！！</strong></font></p><p><font color="red"><strong>不好用！！！</strong></font></p><p><font color="red"><strong>不好用！！！</strong></font></p><p><font color="red"><strong>不好用！！！</strong></font><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1532591012&amp;di=0509f2e1fd1ec8db460ccaf5403a2d05&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fpic.kekenet.com%2F2016%2F1216%2F81441481888940.jpg" alt="我已经用了洪荒之力了"></p><p><font color="red"><strong>说实话，我有点方了…</strong></font><br><br><br></p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>走投无路之下，我只能死马当活马医：<br>直接给最底层元素赋值:</p><pre><code class="prettyprint">$(&quot;#textarea_id&quot;).val(&quot;hello world&quot;);</code></pre><p><strong>哇，没想到成了，对你没有看错，成了！！！！</strong><br><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1444007451,2024641395&amp;fm=27&amp;gp=0.jpg" alt="叉会腰"></p><p><br><br></p><h3 id="完成代码"><a href="#完成代码" class="headerlink" title="完成代码"></a>完成代码</h3><p>平生最恨贴代码不贴jar包的人！！！</p><pre><code class="prettyprint">import org.openqa.selenium.By;import org.openqa.selenium.JavascriptExecutor;import org.openqa.selenium.NoSuchElementException;import org.openqa.selenium.WebDriver;import org.openqa.selenium.WebElement;import org.openqa.selenium.phantomjs.PhantomJSDriver;import org.openqa.selenium.phantomjs.PhantomJSDriverService;import org.openqa.selenium.remote.DesiredCapabilities;import org.openqa.selenium.support.ui.ExpectedConditions;import org.openqa.selenium.support.ui.WebDriverWait;.................public static void setTextarea(WebDriver driver,String target){        String url = &quot;https://bukemiaoshudeurl.com/&quot;+target;        driver.get(url);        Thread.sleep(5000);        JavascriptExecutor jse = (JavascriptExecutor) driver ;        String script = &quot;$(\&quot;#textarea_id\&quot;).val(\&quot;hello world\&quot;);\r\n&quot; +                &quot;$(\&quot;#textarea_submit\&quot;).trigger(\&quot;click\&quot;); &quot;;        jse.executeScript(script);    }</code></pre><p>maven 的pom.xml</p><pre><code class="prettyprint">&lt;dependency&gt;        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;        &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;        &lt;version&gt;2.53.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;        &lt;artifactId&gt;selenium-remote-driver&lt;/artifactId&gt;        &lt;version&gt;2.53.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;        &lt;version&gt;2.53.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;        &lt;groupId&gt;com.codeborne&lt;/groupId&gt;        &lt;artifactId&gt;phantomjsdriver&lt;/artifactId&gt;        &lt;version&gt;1.2.1&lt;/version&gt;        &lt;exclusions&gt;            &lt;exclusion&gt;                &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;                &lt;artifactId&gt;selenium-remote-driver&lt;/artifactId&gt;            &lt;/exclusion&gt;            &lt;exclusion&gt;                &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;                &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;            &lt;/exclusion&gt;        &lt;/exclusions&gt;    &lt;/dependency&gt;</code></pre><p>兄弟只能帮你到这了，遇到问题不要慌，就是怼！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iframe是js动态加载的，获取的页面没有iframe元素…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://guoyouworld.github.io/tags/Java/"/>
+    
+      <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
+    
+      <category term="selenuim" scheme="https://guoyouworld.github.io/tags/selenuim/"/>
+    
+      <category term="异常" scheme="https://guoyouworld.github.io/tags/%E5%BC%82%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux下安装phantomjs</title>
@@ -32,11 +58,11 @@
     </summary>
     
     
+      <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
+    
       <category term="Linux" scheme="https://guoyouworld.github.io/tags/Linux/"/>
     
       <category term="爬虫" scheme="https://guoyouworld.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-      <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
     
   </entry>
   
@@ -67,9 +93,9 @@
     <link href="https://guoyouworld.github.io/2018/07/16/%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E-%E6%80%9D%E8%B7%AF%E6%8E%A2%E7%B4%A2%E4%B8%AD/"/>
     <id>https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/</id>
     <published>2018-07-16T01:34:40.000Z</published>
-    <updated>2018-07-16T01:48:44.254Z</updated>
+    <updated>2018-07-19T07:20:15.732Z</updated>
     
-    <content type="html"><![CDATA[<p>程序出现bug？矿泉水瓶打不开？？我们该怎么办？<br><a id="more"></a></p><h3 id="不要慌"><a href="#不要慌" class="headerlink" title="不要慌"></a>不要慌</h3><p>首先要明白，方法总比困难多，不要慌！！<strong>这是好事</strong>。</p><blockquote><p>有问题才有提高的可能，将问题归类，记下来。<br>以后遇到可以从自己的数据库找到解决方案，才不枉费我们的努力。<br>若是被绊倒后拍拍屁股继续走了，下次还会再次被绊倒，不会觉得很傻？</p></blockquote><p><br><br></p><h3 id="怎么办"><a href="#怎么办" class="headerlink" title="怎么办"></a>怎么办</h3><ol><li>找个地方将问题<strong>写下来</strong></li><li>搞明白是什么问题，找出精确<strong>有效的</strong>信息。</li><li><strong>只描述症状，不描述猜想</strong></li><li>按照<strong>时间顺序</strong>描述</li><li>去除无意义的疑问<br><br><br><h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>程序出现bug？矿泉水瓶打不开？？我们该怎么办？<br><a id="more"></a></p><h3 id="不要慌"><a href="#不要慌" class="headerlink" title="不要慌"></a>不要慌</h3><p>首先要明白，方法总比困难多，不要慌！！<strong>这是好事</strong>。</p><blockquote><p>有问题才有提高的可能，将问题归类，记下来。<br>以后遇到可以从自己的数据库找到解决方案，才不枉费我们的努力。<br>若是被绊倒后拍拍屁股继续走了，下次还会再次被绊倒，不会觉得很傻？</p></blockquote><p><br><br></p><h3 id="怎么办"><a href="#怎么办" class="headerlink" title="怎么办"></a>怎么办</h3><ol><li>找个地方将问题<strong>写下来</strong></li><li>搞明白是什么问题，找出精确<strong>有效的</strong>信息。</li><li><strong>只描述症状，不描述猜想</strong></li><li>按照<strong>时间顺序</strong>描述</li><li>去除无意义的疑问<br><br><br><h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3></li></ol><p><strong>现象：</strong><br>1.无法获取页面元素<br>2.iframe是js动态加载的，获取的页面没有iframe元素<br>3.富文本编辑框拿不到</p><p><strong>使用工具：</strong><br>java<br>selenuim 2.53.0<br>phantomjs-2.1.1-windows</p><p><strong>思路：</strong><br>通过查资料发现问题可能出在嵌套iframe<br>但获取的源代码里面并没有iframe元素</p>]]></content>
     
     <summary type="html">
     
