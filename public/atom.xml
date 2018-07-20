@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guoyouworld.github.io/"/>
-  <updated>2018-07-19T08:09:42.340Z</updated>
+  <updated>2018-07-20T01:49:08.391Z</updated>
   <id>https://guoyouworld.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sqllite多行记录转为一行</title>
+    <link href="https://guoyouworld.github.io/2018/07/20/sqllite%E5%A4%9A%E8%A1%8C%E8%AE%B0%E5%BD%95%E8%BD%AC%E4%B8%BA%E4%B8%80%E8%A1%8C/"/>
+    <id>https://guoyouworld.github.io/2018/07/20/sqllite多行记录转为一行/</id>
+    <published>2018-07-20T01:30:47.000Z</published>
+    <updated>2018-07-20T01:49:08.391Z</updated>
+    
+    <content type="html"><![CDATA[<p>sqllite多行记录转为一行…<br><a id="more"></a></p><h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><table><thead><tr><th style="text-align:left">column1</th><th style="text-align:left">column2</th></tr></thead><tbody><tr><td style="text-align:left">1</td><td style="text-align:left">中</td></tr><tr><td style="text-align:left">1</td><td style="text-align:left">国</td></tr><tr><td style="text-align:left">1</td><td style="text-align:left">人</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">外</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">国</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">人</td></tr></tbody></table><p>实现下面这种效果：</p><table><thead><tr><th style="text-align:left">column1</th><th style="text-align:left">column2</th></tr></thead><tbody><tr><td style="text-align:left">1</td><td style="text-align:left">中,国,人</td></tr><tr><td style="text-align:left">2</td><td style="text-align:left">外,国,人</td></tr></tbody></table><p><br><br></p><h3 id="关键字："><a href="#关键字：" class="headerlink" title="关键字："></a>关键字：</h3><p><code>group_concat</code>将group by产生的同一个分组中的值连接起来，返回一个字符串结果.<br>group_concat( 连接的字段,’分隔符’ )<sub>分隔符默认为逗号，可以不写</sub><br>可以在<strong>连接的字段</strong>前加distinct除重</p><pre><code class="prettyprint">select column1,group_concat(distinct column2) from test group by column1;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;sqllite多行记录转为一行…&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="sql" scheme="https://guoyouworld.github.io/tags/sql/"/>
+    
+      <category term="sqllite" scheme="https://guoyouworld.github.io/tags/sqllite/"/>
+    
+  </entry>
   
   <entry>
     <title>selenuim-phantomjs-java无法获取动态加载的元素</title>
@@ -32,9 +54,9 @@
     </summary>
     
     
-      <category term="Java" scheme="https://guoyouworld.github.io/tags/Java/"/>
-    
       <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
+    
+      <category term="Java" scheme="https://guoyouworld.github.io/tags/Java/"/>
     
       <category term="selenuim" scheme="https://guoyouworld.github.io/tags/selenuim/"/>
     
@@ -58,11 +80,11 @@
     </summary>
     
     
-      <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
-    
       <category term="Linux" scheme="https://guoyouworld.github.io/tags/Linux/"/>
     
       <category term="爬虫" scheme="https://guoyouworld.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="phantomjs" scheme="https://guoyouworld.github.io/tags/phantomjs/"/>
     
   </entry>
   
