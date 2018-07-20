@@ -111,3 +111,43 @@ maven 的pom.xml
 	</dependency>
 ```
 兄弟只能帮你到这了，遇到问题不要慌，就是怼！
+
+<br><br>
+### 后续的坑
+如果观察仔细的小伙伴可能会发现，我通过js提交了表单，页面直接重定向到主页了
+但是，现在直接获取url或者源码发现**还是原来的提交页面**？？？
+![黑人问号](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1782530970,3939566258&fm=27&gp=0.jpg)
+```prettyprint
+public static void setTextarea(WebDriver driver,String target){
+    	String url = "https://bukemiaoshudeurl.com/"+target;
+    	driver.get(url);
+    	Thread.sleep(5000);
+    	JavascriptExecutor jse = (JavascriptExecutor) driver ;
+    	String script = "$(\"#textarea_id\").val(\"hello world\");\r\n" +
+    			"$(\"#textarea_submit\").trigger(\"click\"); ";
+    	jse.executeScript(script);
+      System.out.println(driver.getCurrentUrl());
+      System.out.println(driver.getPageSource());
+    }
+```
+试了很多办法，我没办法用当前页面的js获取到未来要跳转页面的内容啊.（懵逼脸）
+
+经过一番努力...
+
+只需要在执行完js后等待几秒就好了，<font color=red>对！是什么都不用做，等待页面加载完就可以了</font>...
+感觉自己是在跟**空气**斗智斗勇...
+![吐血](https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3721664201,306620058&fm=27&gp=0.jpg)
+```prettyprint
+public static void setTextarea(WebDriver driver,String target){
+    	String url = "https://bukemiaoshudeurl.com/"+target;
+    	driver.get(url);
+    	Thread.sleep(5000);
+    	JavascriptExecutor jse = (JavascriptExecutor) driver ;
+    	String script = "$(\"#textarea_id\").val(\"hello world\");\r\n" +
+    			"$(\"#textarea_submit\").trigger(\"click\"); ";
+    	jse.executeScript(script);
+      Thread.sleep(10000);
+      System.out.println(driver.getCurrentUrl());
+      System.out.println(driver.getPageSource());
+    }
+```
