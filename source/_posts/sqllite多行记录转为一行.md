@@ -31,3 +31,6 @@ group_concat( 连接的字段,'分隔符' )<sub>分隔符默认为逗号，可�
 ```prettyprint
 select column1,group_concat(distinct column2) from test group by column1;
 ```
+<br><br>
+### 微信公众号
+![wechat](https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png)

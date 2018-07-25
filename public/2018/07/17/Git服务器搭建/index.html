@@ -18,7 +18,8 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://user-images.githubusercontent.com/21979120/42792895-076846d6-89aa-11e8-94b0-8724f36195ea.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/21979120/42792976-6c52dfb6-89aa-11e8-97f0-13dd220ab0d0.png">
-<meta property="og:updated_time" content="2018-07-17T02:39:43.936Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png">
+<meta property="og:updated_time" content="2018-07-25T02:04:44.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git服务器搭建">
 <meta name="twitter:description" content="在公司内网搭建git服务器…">
@@ -204,7 +205,7 @@
             <div id="toc-article" class="toc-article" style="display:none">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地创建公钥-本地客户端"><span class="toc-number">2.</span> <span class="toc-text">本地创建公钥[本地客户端]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端储存公钥文件-服务器"><span class="toc-number">3.</span> <span class="toc-text">服务端储存公钥文件[服务器]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#禁用shell登陆-可选"><span class="toc-number">4.</span> <span class="toc-text">禁用shell登陆[可选]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化git仓库项目"><span class="toc-number">5.</span> <span class="toc-text">初始化git仓库项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能遇到的坑-异常"><span class="toc-number">6.</span> <span class="toc-text">可能遇到的坑[异常]</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地创建公钥-本地客户端"><span class="toc-number">2.</span> <span class="toc-text">本地创建公钥[本地客户端]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端储存公钥文件-服务器"><span class="toc-number">3.</span> <span class="toc-text">服务端储存公钥文件[服务器]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#禁用shell登陆-可选"><span class="toc-number">4.</span> <span class="toc-text">禁用shell登陆[可选]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化git仓库项目"><span class="toc-number">5.</span> <span class="toc-text">初始化git仓库项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能遇到的坑-异常"><span class="toc-number">6.</span> <span class="toc-text">可能遇到的坑[异常]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">7.</span> <span class="toc-text">微信公众号</span></a></li></ol>
             </div>
             <script type="text/javascript">
               function showToc(){
@@ -281,7 +282,7 @@ git push --force --set-upstream origin master
 修改url为正确的即可<br><br></li>
 <li><code>index-pack abnormal exit</code>这个问题有很多，需要具体问题具体分析，我遇到的是<code>Permission denied</code>没有操作目录得权限<br>解决方案：<pre><code class="prettyprint">chown -R git /home/git-repository/test1
 </code></pre>
-</li>
+<br><br><h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><img src="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png" alt="wechat"></li>
 </ol>
 
       
@@ -429,7 +430,7 @@ git push --force --set-upstream origin master
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地创建公钥-本地客户端"><span class="toc-number">2.</span> <span class="toc-text">本地创建公钥[本地客户端]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端储存公钥文件-服务器"><span class="toc-number">3.</span> <span class="toc-text">服务端储存公钥文件[服务器]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#禁用shell登陆-可选"><span class="toc-number">4.</span> <span class="toc-text">禁用shell登陆[可选]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化git仓库项目"><span class="toc-number">5.</span> <span class="toc-text">初始化git仓库项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能遇到的坑-异常"><span class="toc-number">6.</span> <span class="toc-text">可能遇到的坑[异常]</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地创建公钥-本地客户端"><span class="toc-number">2.</span> <span class="toc-text">本地创建公钥[本地客户端]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端储存公钥文件-服务器"><span class="toc-number">3.</span> <span class="toc-text">服务端储存公钥文件[服务器]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#禁用shell登陆-可选"><span class="toc-number">4.</span> <span class="toc-text">禁用shell登陆[可选]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化git仓库项目"><span class="toc-number">5.</span> <span class="toc-text">初始化git仓库项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可能遇到的坑-异常"><span class="toc-number">6.</span> <span class="toc-text">可能遇到的坑[异常]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">7.</span> <span class="toc-text">微信公众号</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -596,15 +597,15 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenuim</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">

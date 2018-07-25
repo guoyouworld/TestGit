@@ -20,3 +20,6 @@ git push --force --set-upstream origin master
 git reset --hard HEAD  
 git pull
 ```
+<br><br>
+### 微信公众号
+![wechat](https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png)

@@ -20,7 +20,8 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/21979120/42677677-10c2b674-86af-11e8-873d-ad189795f938.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/21979120/42678556-d64d6f36-86b1-11e8-8ada-abf9c0374de8.png">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531561272766&di=a06271af073440cb91ef02d3a37ffe3e&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D725318554%2C1946417039%26fm%3D214%26gp%3D0.jpg">
-<meta property="og:updated_time" content="2018-07-16T01:50:41.707Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png">
+<meta property="og:updated_time" content="2018-07-25T02:03:53.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring源码深度解析[持续更新中...]">
 <meta name="twitter:description" content="Spring源码深度解析读书笔记…">
@@ -206,7 +207,7 @@
             <div id="toc-article" class="toc-article" style="display:none">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring的整体架构"><span class="toc-number">1.</span> <span class="toc-text">Spring的整体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring环境搭建"><span class="toc-number">2.</span> <span class="toc-text">Spring环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到问题怎么办？"><span class="toc-number">3.</span> <span class="toc-text">遇到问题怎么办？</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring的整体架构"><span class="toc-number">1.</span> <span class="toc-text">Spring的整体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring环境搭建"><span class="toc-number">2.</span> <span class="toc-text">Spring环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到问题怎么办？"><span class="toc-number">3.</span> <span class="toc-text">遇到问题怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">4.</span> <span class="toc-text">微信公众号</span></a></li></ol>
             </div>
             <script type="text/javascript">
               function showToc(){
@@ -246,6 +247,8 @@
 <li>按照时间顺序描述</li>
 <li>去除无意义的疑问<br>我觉得这块可以作为一篇新的<a href="https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/">文章</a>…</li>
 </ul>
+<p><br><br></p>
+<h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p><img src="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png" alt="wechat"></p>
 
       
 
@@ -392,7 +395,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring的整体架构"><span class="toc-number">1.</span> <span class="toc-text">Spring的整体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring环境搭建"><span class="toc-number">2.</span> <span class="toc-text">Spring环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到问题怎么办？"><span class="toc-number">3.</span> <span class="toc-text">遇到问题怎么办？</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring的整体架构"><span class="toc-number">1.</span> <span class="toc-text">Spring的整体架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring环境搭建"><span class="toc-number">2.</span> <span class="toc-text">Spring环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到问题怎么办？"><span class="toc-number">3.</span> <span class="toc-text">遇到问题怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">4.</span> <span class="toc-text">微信公众号</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -559,15 +562,15 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">selenuim</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">

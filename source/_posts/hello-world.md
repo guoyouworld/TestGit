@@ -10,3 +10,7 @@ tags: 随笔
 
 <br><br>
 ![竹篮打水](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531789852&di=33f8076d0416efcde2979de3259fcd14&imgtype=jpg&er=1&src=http%3A%2F%2Fepaper.shaoyangnews.net%2Fepaper%2Fsywb%2Fhtml%2F2015%2F05%2F08%2F07%2Fimages%2F3.jpg)
+
+<br><br>
+### 微信公众号
+![wechat](https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png)

@@ -50,3 +50,7 @@ GRADLE_HOME=D:\gradle\gradle-4.8.1-all\gradle-4.8.1
 * 按照时间顺序描述
 * 去除无意义的疑问
 我觉得这块可以作为一篇新的[文章](https://guoyouworld.github.io/2018/07/16/遇到问题该怎么办-思路探索中/)...
+
+<br><br>
+### 微信公众号
+![wechat](https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png)
