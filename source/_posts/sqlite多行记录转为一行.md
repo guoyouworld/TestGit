@@ -3,7 +3,7 @@ title: sqlite多行记录转为一行
 date: 2018-07-20 09:30:47
 tags: [sql,sqlite]
 ---
-sqllite多行记录转为一行...
+sqlite多行记录转为一行...
 <!--more-->
 ### 实现效果
 |  column1        |  column2  |
