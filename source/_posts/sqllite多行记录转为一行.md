@@ -1,7 +1,7 @@
 ---
-title: sqllite多行记录转为一行
+title: sqlite多行记录转为一行
 date: 2018-07-20 09:30:47
-tags: [sql,sqllite]
+tags: [sql,sqlite]
 ---
 sqllite多行记录转为一行...
 <!--more-->

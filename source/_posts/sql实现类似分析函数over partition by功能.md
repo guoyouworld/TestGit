@@ -1,7 +1,7 @@
 ---
 title: sql实现类似分析函数over partition by功能
 date: 2018-07-13 10:26:02
-tags: [sql,sqllite]
+tags: [sql,sqlite]
 ---
 近期项目用到了类似oracle的分析函数over partition by功能，但是我们用的数据库是sqllite，并不支持分析函数。
 So ......
