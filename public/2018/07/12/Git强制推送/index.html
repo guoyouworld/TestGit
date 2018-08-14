@@ -17,7 +17,7 @@
 <meta property="og:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png">
-<meta property="og:updated_time" content="2018-07-25T02:04:45.383Z">
+<meta property="og:updated_time" content="2018-08-14T08:07:53.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git强制推送">
 <meta name="twitter:description" content="如何替换远程仓库内容？如何替换本地仓库修改？">
@@ -203,7 +203,7 @@
             <div id="toc-article" class="toc-article" style="display:none">
                 <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
                 <strong class="toc-title">文章目录</strong>
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">3.</span> <span class="toc-text">微信公众号</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后续的坑"><span class="toc-number">3.</span> <span class="toc-text">后续的坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">4.</span> <span class="toc-text">微信公众号</span></a></li></ol>
             </div>
             <script type="text/javascript">
               function showToc(){
@@ -232,6 +232,12 @@ git push --force --set-upstream origin master
 git pull
 </code></pre>
 <p><br><br></p>
+<h3 id="后续的坑"><a href="#后续的坑" class="headerlink" title="后续的坑"></a>后续的坑</h3><p>强制替换远程仓库的时候如果添加了readme.md文件<br>那么在执行替换命令的时候会提示 <code>error: failed to push some refs to</code><br>因为远程仓库与本地文件不一致<br>这时候需要：</p>
+<pre><code class="prettyprint">git init
+git remote add origin https://github.com/guoyouworld/ImageManagement.git
+git pull origin master
+git push --force --set-upstream origin master
+</code></pre>
 <h3 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h3><p><img src="https://user-images.githubusercontent.com/21979120/43175494-eabdbb26-8ff1-11e8-8c08-5309d9f5848c.png" alt="wechat"></p>
 
       
@@ -379,7 +385,7 @@ git pull
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">3.</span> <span class="toc-text">微信公众号</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库替换"><span class="toc-number">1.</span> <span class="toc-text">远程仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地仓库替换"><span class="toc-number">2.</span> <span class="toc-text">本地仓库替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后续的坑"><span class="toc-number">3.</span> <span class="toc-text">后续的坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信公众号"><span class="toc-number">4.</span> <span class="toc-text">微信公众号</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -526,27 +532,11 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">phantomjs</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">phantomjs</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -558,11 +548,27 @@ $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">sqlite</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
             
               <li class="article-tag-list-item">
