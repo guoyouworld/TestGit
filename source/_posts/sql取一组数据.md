@@ -5,6 +5,9 @@ tags: [sql,sqlite,mysql]
 ---
 sql取一组数据...
 <!--more-->
+
+**前提条件是：column1 是`distinct`的**
+
 ### 实现效果
 ```prettyprint
 select column1,column2 from A;
